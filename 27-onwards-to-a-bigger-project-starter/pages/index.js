@@ -17,7 +17,7 @@ function HomePage(props) {
 
 export async function getStaticProps() {
   const client = await MongoClient.connect(
-    "mongodb+srv://joenepnep_db_user:wzBxjeEdkUvBrpB2@cluster0.gj3bqtn.mongodb.net/meetups",
+    "MongoToken",
   );
 
   const db = client.db();
