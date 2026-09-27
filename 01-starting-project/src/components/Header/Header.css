@@ -1,0 +1,37 @@
+header {
+  margin: 0;
+  text-align: center;
+  margin: 3rem 0 0;
+}
+
+header img {
+  margin: 0;
+  height: 8rem;
+  width: 25rem;
+  object-fit: cover;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "MedievalSharp";
+  font-size: 6rem;
+  background: white;
+  -webkit-text-fill-color: transparent;
+}
+
+header h2 {
+  text-align: center;
+  font-size: medium;
+  font-style: italic;
+  font-weight: lighter;
+  font-family: "Source Sans 3", "cursive";
+  margin: 0 0 1.5rem 0;
+  color: #ffffff;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #8964b0;
+  font-family: "Roboto Condensed", sans-serif;
+}

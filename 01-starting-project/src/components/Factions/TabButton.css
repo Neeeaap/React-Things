@@ -1,0 +1,81 @@
+#factions {
+  justify-content: center;
+  margin: 90px 0 50px 0;
+}
+
+#factions h2 {
+  margin: 0 0 0.5rem 10px;
+  text-align: left;
+}
+
+#factions menu {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#factions menu button {
+  padding: 0.5rem 1rem;
+  border-style: outset;
+  border-radius: 5px;
+  border-color: rgb(42, 27, 5);
+  background-color: rgb(74, 47, 8);
+  color: #fff7be;
+  font-family: "EB Garamond", sans-serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-wrap-mode: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+
+#factions menu button:hover {
+  border-color: rgba(19, 136, 149, 0.536);
+  background-color: rgb(7, 63, 69);
+  font-size: 1rem;
+  font-family: "Cormorant Unicase", sans-serif;
+  color: #ebe7ef;
+}
+
+#factions menu button.active {
+  border-color: rgb(167, 139, 26);
+  background-color: rgb(255, 185, 7);
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Cormorant Unicase", sans-serif;
+  color: #000000;
+}
+
+#tab-content {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #2e1c0d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+#tab-content:hover {
+  background-color: #0f2933;
+}
+
+#tab-content h3 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-size: x-large;
+  max-width: 250px;
+}
+
+#tab-content p {
+  max-width: 900px;
+  white-space: pre-wrap;
+}
+
+#tab-content img {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+}

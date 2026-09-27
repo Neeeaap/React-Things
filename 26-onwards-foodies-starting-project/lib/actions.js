@@ -1,0 +1,39 @@
+"use server";
+
+import { redirect } from "next/navigation";
+import { saveMeal } from "./meals";
+import { revalidatePath } from "next/cache";
+
+function isInvalidText(text) {
+  return !text || text.trim() === "";
+}
+
+export async function shareMeal(prevState, formData) {
+  const meal = {
+    title: formData.get("title"),
+    summary: formData.get("summary"),
+    instructions: formData.get("instructions"),
+    image: formData.get("image"),
+    email: formData.get("email"),
+    creator: formData.get("name"),
+  };
+
+  if (
+    isInvalidText(meal.title) ||
+    isInvalidText(meal.summary) ||
+    isInvalidText(meal.instructions) ||
+    isInvalidText(meal.email) ||
+    isInvalidText(meal.creator) ||
+    !meal.email.includes("@") ||
+    !meal.image ||
+    meal.image.size === 0
+  ) {
+    return {
+      message: "Invalid input - please check your data.",
+    };
+  }
+
+  await saveMeal(meal);
+  revalidatePath("/meals");
+  redirect("/meals");
+}
